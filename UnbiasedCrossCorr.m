@@ -18,6 +18,6 @@ function [Cx,p] = UnbiasedCrossCorr(X,pmax)
         for j = 1:length(X) - i
             sum = sum + X(j) * X(j + i);
         end
-        Cx(i + 1) = ( sum / length(X)) / (1 - (abs(p(i))/length(X)));
+        Cx(i + 1) = ( sum / length(X)) / (1 - (abs(p(i+1))/length(X)));
     end
 end
